@@ -1,0 +1,150 @@
+<!-- Matthew Zariske
+Student ID: 001472173
+09/21/24
+NIP2 TASK 1: CHATBOT-->
+
+<aiml version="2.0">
+    
+<!-- Greetings -->
+    <category>
+    <pattern>HI</pattern>
+    <template>Hello, how may I help you?</template>
+  </category>
+  
+  <category>
+    <pattern>HEY</pattern>
+    <template>Hello, how may I help you?</template>
+  </category>
+  
+    <category>
+    <pattern>HELLO</pattern>
+    <template>Hello, how may I help you?</template>
+  </category>
+  
+  
+      <category>
+    <pattern>CAREER ADVICE</pattern>
+    <template>I can help you with deciding what career would be most fitting for you based off of your strengths and preferences. I am going to ask you some questions, the results will match you with the career that is most ideal for you. Are you ready?</template>
+  </category>
+  
+  <category>
+    <pattern>* CAREER ADVICE</pattern>
+    <template>I can help you with deciding what career would be most fitting for you based off of your strengths and preferences. I am going to ask you some questions, the results will match you with the career that is most ideal for you. Are you ready?</template>
+  </category>
+  
+    <category>
+    <pattern>* CAREER ADVICE *</pattern>
+    <template>I can help you with deciding what career would be most fitting for you based off of your strengths and preferences. I am going to ask you some questions, the results will match you with the career that is most ideal for you. Are you ready?</template>
+  </category>
+
+
+  <category>
+    <pattern>YES</pattern>
+    <that>ARE YOU READY</that>
+    <template>Great! First, do you prefer working on projects alone or in a team?</template>
+  </category>
+
+  <category>
+    <pattern>ALONE</pattern>
+    <that>* DO YOU PREFER WORKING ON PROJECTS ALONE OR IN A TEAM</that>
+    <template>Okay. Do you enjoy working with data and performing statistical analysis?</template>
+  </category>
+
+  <category>
+    <pattern>* ALONE *</pattern>
+    <that>* DO YOU PREFER WORKING ON PROJECTS ALONE OR IN A TEAM</that>
+    <template>Okay. Do you enjoy working with data and performing statistical analysis?</template>
+  </category>
+
+  <category>
+    <pattern>IN A TEAM</pattern>
+    <that>* DO YOU PREFER WORKING ON PROJECTS ALONE OR IN A TEAM</that>
+    <template>Understood. Are you more interested in building software or managing systems?</template>
+  </category>
+
+  <category>
+    <pattern>* TEAM *</pattern>
+    <that>* DO YOU PREFER WORKING ON PROJECTS ALONE OR IN A TEAM</that>
+    <template>Understood. Are you more interested in building software or managing systems?</template>
+  </category>
+
+  <!-- Responses for alone -->
+  <category>
+    <pattern>YES</pattern>
+    <that>DO YOU ENJOY WORKING WITH DATA AND PERFORMING STATISTICAL ANALYSIS</that>
+    <template>Great! Based on your preferences, I recommend a career as a Data Scientist. Data scientists work with large amounts of data to extract insights and help organizations make better decisions.</template>
+  </category>
+
+  <category>
+    <pattern>NO</pattern>
+    <that>DO YOU ENJOY WORKING WITH DATA AND PERFORMING STATISTICAL ANALYSIS</that>
+    <template>I see. Do you prefer writing code and developing applications?</template>
+  </category>
+
+  <category>
+    <pattern>YES</pattern>
+    <that>DO YOU PREFER WRITING CODE AND DEVELOPING APPLICATIONS</that>
+    <template>Excellent! I recommend a career as a Software Developer. Software developers create and maintain software to meet user needs. They use a variety of skills and tools, including programming languages, database management systems, and web development platforms.</template>
+  </category>
+
+  <category>
+    <pattern>NO</pattern>
+    <that>DO YOU PREFER WRITING CODE AND DEVELOPING APPLICATIONS</that>
+    <template>Based on your responses, a career as a Database Administrator might be suitable. A database administrator is responsible for maintaining, securing, and operating databases for an organization.</template>
+  </category>
+
+  <!-- Responsesp for 'in a team' -->
+  <category>
+    <pattern>BUILDING SOFTWARE</pattern>
+    <that>ARE YOU MORE INTERESTED IN BUILDING SOFTWARE OR MANAGING SYSTEMS</that>
+    <template>Great! Based on your preferences, I recommend a career as a Data Scientist. Data scientists work with large amounts of data to extract insights and help organizations make better decisions.</template>
+  </category>
+
+  <category>
+    <pattern>MANAGING SYSTEMS</pattern>
+    <that>ARE YOU MORE INTERESTED IN BUILDING SOFTWARE OR MANAGING SYSTEMS</that>
+    <template>Understood. Are you more interested in general system administration or focusing on security?</template>
+  </category>
+
+  <category>
+    <pattern>GENERAL SYSTEM ADMINISTRATION</pattern>
+    <that>ARE YOU MORE INTERESTED IN GENERAL SYSTEM ADMINISTRATION OR FOCUSING ON SECURITY</that>
+    <template>Based on your interests, I recommend a career as a Systems Administrator. A systems administrator is responsible for the stability, security, and performance of an organization's computer systems and networks.</template>
+  </category>
+
+  <category>
+    <pattern>FOCUSING ON SECURITY</pattern>
+    <that>ARE YOU MORE INTERESTED IN GENERAL SYSTEM ADMINISTRATION OR FOCUSING ON SECURITY</that>
+    <template>Given your preference for security, I suggest a career as a Cybersecurity Analyst. Cybersecurity analysts protect an organization's computer systems, networks, and sensitive information from cyber threats.</template>
+  </category>
+
+  <!-- Error responses -->
+  <category>
+    <pattern>*</pattern>
+    <that>* DO YOU PREFER WORKING ON PROJECTS ALONE OR IN A TEAM</that>
+    <template>I'm sorry, that is not a valid response. Please answer with either "alone" or "in a team".</template>
+  </category>
+
+  <category>
+    <pattern>*</pattern>
+    <that>DO YOU ENJOY *</that>
+    <template>I'm sorry, that is not a valid response. Please answer with either "yes" or "no".</template>
+  </category>
+
+  <category>
+    <pattern>*</pattern>
+    <that>DO YOU PREFER *</that>
+    <template>I'm sorry, that is not a valid response. Please answer with either "yes" or "no".</template>
+  </category>
+
+  <category>
+    <pattern>*</pattern>
+    <that>ARE YOU MORE INTERESTED IN *</that>
+    <template>I'm sorry, that is not a valid response. Please choose one of the options I mentioned.</template>
+  </category>
+
+  <category>
+    <pattern>*</pattern>
+    <template>I'm sorry, I didn't understand that response. Could you please try again?</template>
+  </category>
+</aiml>
